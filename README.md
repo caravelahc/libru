@@ -28,3 +28,13 @@ hoje tem:
 • chicória e pepino
 • abacaxi
 ```
+
+You can also specify the weekday:
+```python
+ru(weekday=0) # monday
+```
+And:
+```bash
+$ ru 0
+$ ru segunda
+```

@@ -27,9 +27,11 @@ def parse(content, weekday):
     return today
 
 
-def ru():
+def ru(weekday=None):
     resp = requests.get('http://ru.ufsc.br/ru/')
-    weekday = datetime.now(timezone('America/Sao_Paulo')).weekday()
+
+    if weekday is None:
+        weekday = datetime.now(timezone('America/Sao_Paulo')).weekday()
 
     if not resp.ok:
         return []
