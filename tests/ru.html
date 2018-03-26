@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://ru.ufsc.br/ru/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="SeTIC-UFSC">
+    <meta name="generator" content="WordPress 4.7.4-RC1">
+    <meta name="description" content="">
+    <meta name="copyright" content="Universidade Federal de Santa Catarina">
+    <meta name="Keywords" content="universidade, federal, santa, catarina, a universidade, faculdade, estudantes, faculdade, ensino superior, licenciatura, mestrado, doutorado, pós-graduações, bolsas, candidatura ao ensino superior">
+
+    <title>Restaurante Universitário</title>        
+
+    <link rel="stylesheet" type="text/css" href="./Restaurante Universitário_files/reset.css">
+    <link rel="stylesheet" type="text/css" href="./Restaurante Universitário_files/style.css">
+    <link rel="alternate stylesheet" type="text/css" href="./Restaurante Universitário_files/high.css" title="high" disabled="">
+    <link rel="shortcut icon" type="image/x-icon" href="http://ru.ufsc.br/wp-content/themes/brasilGovInterno/img/favicon.ico?ver=1500645527">
+    <link href="./Restaurante Universitário_files/css" rel="stylesheet" type="text/css">
+    <script src="./Restaurante Universitário_files/modernizr-2.7.min.js"></script>
+    <script src="./Restaurante Universitário_files/font-resizer.js"></script>           
+
+
+    <link rel="dns-prefetch" href="http://s.w.org/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/ru.ufsc.br\/wp-includes\/js\/wp-emoji.js?ver=4.7.4-RC1","twemoji":"http:\/\/ru.ufsc.br\/wp-includes\/js\/twemoji.js?ver=4.7.4-RC1"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji4" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var stringFromCharCode = String.fromCharCode,
+			flag, flag2, technologist, technologist2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'U' and 'N' in them, if the browser doesn't render flag emoji
+				 * - The United Nations flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56826, 55356, 56819 ), 0, 0 );
+				if ( canvas.toDataURL().length < 3000 ) {
+					return false;
+				}
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				/*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+				context.fillText( stringFromCharCode( 55356, 57331, 65039, 8205, 55356, 57096 ), 0, 0 );
+				flag = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55356, 57331, 55356, 57096 ), 0, 0 );
+				flag2 = canvas.toDataURL();
+
+				return flag !== flag2;
+			case 'emoji4':
+				/*
+				 * Emoji 4 has the best technologists. So does WordPress!
+				 *
+				 * To test for support, try to render a new emoji (woman technologist: medium skin tone),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (woman technologist: medium skin tone + personal computer).
+				 */
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 8205, 55357, 56507), 0, 0 );
+				technologist = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 55357, 56507), 0, 0 );
+				technologist2 = canvas.toDataURL();
+
+				return technologist !== technologist2;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji4' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script><script src="./Restaurante Universitário_files/twemoji.js" type="text/javascript" defer=""></script><script src="./Restaurante Universitário_files/wp-emoji.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="dashicons-css" href="./Restaurante Universitário_files/dashicons.css" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="./Restaurante Universitário_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="patrocinio-css" href="./Restaurante Universitário_files/patrocinio.css" type="text/css" media="all">
+<link rel="stylesheet" id="collapseomatic-css-css" href="./Restaurante Universitário_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Restaurante Universitário_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="sharity-style-css" href="./Restaurante Universitário_files/sharity-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="auto-thickbox-css" href="./Restaurante Universitário_files/styles-pre39.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-smoothness-css" href="./Restaurante Universitário_files/jquery-ui.min.css" type="text/css" media="screen">
+<link rel="stylesheet" id="slideshow-css3-css" href="./Restaurante Universitário_files/css3.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Restaurante Universitário_files/jquery.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/collapse.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/functions.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/ufsc.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/jquery.pikachoose.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/sharity.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/jquery.fancybox.pack.js"></script>
+<link rel="https://api.w.org/" href="http://ru.ufsc.br/wp-json/">
+<link rel="shortlink" href="http://ru.ufsc.br/?p=65">
+<link rel="alternate" type="application/json+oembed" href="http://ru.ufsc.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fru.ufsc.br%2Fru%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://ru.ufsc.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fru.ufsc.br%2Fru%2F&amp;format=xml">
+ 
+    <link href="./Restaurante Universitário_files/video-js.min.css" rel="stylesheet">
+    <script src="./Restaurante Universitário_files/video.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+    _V_.options.flash.swf = "/wp-content/mu-plugins/videojs/video-js.swf";
+  </script>
+
+    
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Próximo &gt;","prev":"&lt; Anterior","image":"Imagem","of":"de","close":"Fechar","loadingAnimation":"http:\/\/ru.ufsc.br\/wp-content\/plugins\/auto-thickbox\/images\/loadingAnimation.gif"};
+try{convertEntities(thickboxL10n);}catch(e){};;
+/* ]]> */
+</script>
+<style type="text/css" media="all">#barra-brasil div,#barra-brasil a,#barra-brasil ul,#barra-brasil li{margin:0;padding:0;font-size:100%;font-family:inherit;vertical-align:baseline}#barra-brasil ul{list-style:none}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;src:local("Open Sans Bold"),local("OpenSans-Bold"),url("//barra.brasil.gov.br/static/opensans-bold.woff") format("woff")}#barra-brasil{height:32px;background:#f1f1f1;font-weight:bold;font-size:12px;line-height:32px;font-family:"Open Sans",Arial,Helvetica,sans-serif;border-bottom:1px solid #dfdfdf;box-sizing:content-box}#barra-brasil a{text-decoration:none}body.contraste #barra-brasil{background:#000 !important}div#wrapper-barra-brasil{position:relative;overflow:hidden;margin:0 auto;width:100%;max-width:960px;height:100%}#barra-brasil .brasil-flag{float:left;padding:7px 0 6px;width:115px;height:19px;border-right:2px solid #dfdfdf}#barra-brasil .brasil-flag .link-barra{display:block;padding-left:42px;width:43px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAATCAMAAAC5m+00AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACrUExURQCXSF27iQCWRQOWSQCWSRCdVACSSgCWRwCVSRKcVv/oAP/yAAIvh/bjBQKVTP/rAK3PF/3sARZBkg05ima2LCqiPg+ZRR9JoermBbGwLwEqkgCST1GwMRqdQZfIHdzgCSdSlTlYbEWrNyNKeouUPHOgtEJsn2WOrSClX2m/lF+6i3q8JsDVEBpCgWN2WefTD8i/IYSstzKmO3eIUaa2h3SOjfvlHjVfq6OmNShvDYIAAAFISURBVCjPbVHXksMgDNQBljC4l9iOndjp5VKv//+XnXByb7fDADO7rNAK9v4DngPv/h/24BHBuEhqB3pCeUxJIAWKtMZlIVCTciogH3yhWMpinM2t7ZctS5UgAR74kVICpMauNrfmaucTpMj5e+4VUNTOEvuzCoL8EvZLJCH1SIHAqKjtehowposwTmbIcqZIt+UpNV/3zWa3HYLp2sZ1gegoPXkNU5M238Ow3d132cIYEyel9MHDLo2NcX4519puPkPmbOIowrdTbGyTZXk2BEH1kZo4LPSjFgq2DFcVc3lWNZbt2rGWIIiwTOztzJZV9W77glCp8RsSNHdc1NfL6rxoxp5JCcmUC1cJjdx0GKZ1hxq0eqYBkuPlzLHrjXuiOAwaDUGQFJyWBpyU7EUaQI/xckGeA98jksqNQLmp8BnB4Xh8+ReHX640GNLt25uiAAAAAElFTkSuQmCC") 8px center no-repeat;text-transform:uppercase;line-height:19px}#barra-brasil .acesso-info{position:absolute;left:130px}#barra-brasil .list{position:absolute;top:0;right:0}#barra-brasil .list .first{border-left:2px solid #dfdfdf}#barra-brasil .list-item{display:inline-block;height:32px;border-right:2px solid #dfdfdf}#barra-brasil .list-item a{padding:0 15px 8px 13px}#barra-brasil .link-barra{color:#606060}body.contraste #barra-brasil .link-barra{color:#FF0 !important;text-decoration:underline}#menu-icon{position:absolute;top:3px;border-top:15px double #606060;border-bottom:5px solid #606060;display:none;width:20px;right:5px}@media only screen and (max-width: 959px){#barra-brasil #menu-icon{display:inline-block;padding:5px 3px 0px 3px}#barra-brasil .list .first{border-left:1px solid #dfdfdf}#barra-brasil nav:hover #menu-icon,#barra-brasil nav:active #menu-icon,#barra-brasil nav:focus #menu-icon{background-color:#DDD}body.contraste #barra-brasil nav:hover #menu-icon,body.contraste #barra-brasil nav:active #menu-icon,body.contraste #barra-brasil nav:focus #menu-icon{background-color:#606060 !important}#barra-brasil ul.list,#barra-brasil ul.list:active,#barra-brasil ul.list:focus{overflow:hidden;height:0px;transition:0.3s;padding-top:32px;width:auto;position:absolute;z-index:9}#barra-brasil .list-item{display:block;text-align:center;height:30px;background:#EEE;border:1px solid #dfdfdf}#barra-brasil .list-item a{padding:8px 30px 8px 28px}body.contraste #barra-brasil .list-item{background:#000 !important}body.contraste #menu-icon{border-top:15px double #fff !important;border-bottom:5px solid #fff !important}#barra-brasil .list a:active li,#barra-brasil .list a:focus li,#barra-brasil .list a:hover li{background:#DDD}body.contraste #barra-brasil .list a:active li,body.contraste #barra-brasil .list a:focus li,body.contraste #barra-brasil .list a:hover li{background:#606060 !important}#barra-brasil nav:active ul.list,#barra-brasil nav:focus ul.list,#barra-brasil nav:hover ul.list{height:150px;transition:0.5s}div#wrapper-barra-brasil{overflow:visible}}@media screen and (min-width: 960px){#wrapper-barra-brasil{width:960px}}@media print{#barra-brasil .list{display:none}#barra-brasil .acesso-info .link-barra:after{content:" - Barra GovBr"}}</style><style type="text/css" media="all">div#wrapper-footer-brasil{position:relative;overflow:hidden;margin:0 auto;width:auto;padding:0 20px;max-width:960px}#wrapper-footer-brasil .logo-acesso-footer{float:left;width:107px;background:url("data:image/png;base64,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") center no-repeat;height:49px}#wrapper-footer-brasil .logo-brasil-footer{float:right;width:153px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAAAwCAMAAAA1kSiuAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAFiUExURQAAAP/////////////////////////dAICUGYa2J////////////////////////////////////////////////////////////////////////////6PBH97PCY2fGMDCEFSIKV6EIv/dAP/dACd2OCuHPil+OyqBPCh6OSuKPyqEPSJkMCyTQyyNQS2gSCZwNS2bRiFfLiRtNCRqMy2dRydzNx9bLCNnMi2YRR1UKS2WRCyQQip8OcnIDyBYKiZyNvfZAiyRQvWGHcbADSBioqy7F/////uoFkaFMEiVNpimFztyLJ21HPaPG3GuLiBQjvyxE3GdJ+nUBvmYGTeRPY24JEekPmGJJd7NCFqXMoKbH9TQDtKTJlipN/mgGKKvF7fFF4GvJ0VymbKGRKmaJ/vHCKODJO2nGdrl8N6WKry8EYp0WGSOuoisza7D2nd7JEpYcrWacEN9stekWsTR4lEu4eYAAABIdFJOUwDzBb3oLXhAcHA7EJJUhJ6wRxpg0NrhI2jHbnOpX0hfUd2Nqf///////////////////////////////////////////////nia+rQAAAnqSURBVFjD7ZnXf9tIDoApkdTuSVTvtjZll8kmci+JHSeiQ5sRrWIpkSNbkuMap9dt//9hBphhkXd/93b3cPNiZkAAHzDAUJlREumIFlP4iBqaloryx3gpocQy/DGhaVoRX1C1UjrHn3JaXEkZOFtWI4WkEhgq6Oj8KQ1PKMxrmppFcRwm0bgCto0oadVUeihrbCpd1bNxnIgV9XiJKEt5pZhHCFfXyzhZiOnVFOq6Ws5I02ytXHHLAbLijK6jv4yh6wn+VCnoMxHEzWq6jhEqbjZO5EouQtEousuUI9lyOo261RmgI+6YGo9EiUxVZ4nBSBZmiaymElnOzaGqn6yaIexMSSWLlSq8htpZMEk4bj4ZocSk0iJWJCtWEjMuBqDC8qRriuAxxFMyS7EUipoaJbJEIYJ2Em5ciZaCy1k0KjSRSWezkixaylPOslmRs2qE/ES1YjGS8JHlI0aGJuKRWo3yDSZdXZAZBikX8nGSl92oTmRKSjMKhWiQTIJmVMPA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") center no-repeat;height:48px}body.contraste #footer-brasil{background:#000 !important}@media screen and (min-width: 960px){#wrapper-footer-brasil{width:960px}}@media print{#wrapper-footer-brasil{border-top:2px solid #dfdfdf}#wrapper-footer-brasil:before{content:"Barra GovBr";color:#606060;font-size:12px;font-family:"Open Sans",Arial,Helvetica,sans-serif}}</style></head>
+<body><div id="barra-brasil"><div id="wrapper-barra-brasil"><div class="brasil-flag"><a href="http://brasil.gov.br/" class="link-barra">Brasil</a></div><span class="acesso-info"><a href="http://brasil.gov.br/barra#acesso-informacao" class="link-barra">Acesso à informação</a></span><nav><ul class="list"><li><a href="http://ru.ufsc.br/ru/#" id="menu-icon"></a></li><li class="list-item first"><a href="http://brasil.gov.br/barra#participe" class="link-barra">Participe</a></li><li class="list-item"><a href="http://www.servicos.gov.br/?pk_campaign=barrabrasil" class="link-barra" id="barra-brasil-orgao">Serviços</a></li><li class="list-item"><a href="http://www.planalto.gov.br/legislacao" class="link-barra">Legislação</a></li><li class="list-item last last-item"><a href="http://brasil.gov.br/barra#orgaos-atuacao-canais" class="link-barra">Canais</a></li></ul></nav></div>
+</div>
+
+<div id="wrapper">
+    <header id="header">
+            <div id="header_grid" class="grid">
+            <div>
+                <ul id="shortcuts" class="hide_mobile">
+                    <li><a accesskey="1" href="http://ru.ufsc.br/ru/#conteudo">Ir para o conteúdo <span>1</span></a></li>
+                    <li><a accesskey="2" href="http://ru.ufsc.br/ru/#menu">Ir para o menu <span>2</span></a></li>
+                    <li><a accesskey="3" href="http://ru.ufsc.br/ru/#busca">Ir para a busca <span>3</span></a></li>
+                    <li><a accesskey="4" href="http://ru.ufsc.br/ru/#rodape">Ir para o rodapé <span>4</span></a></li>
+                </ul>
+                <ul id="topbar">
+                    <li><a accesskey="7" href="http://ufsc.br/acessibilidade/">Acessibilidade</a></li>
+                    <li><a accesskey="8" href="http://ru.ufsc.br/ru/#" id="contrast">Alto Contraste</a></li>
+                    <li><a accesskey="9" href="http://ru.ufsc.br/mapa-do-site">Mapa do Site</a></li>
+                </ul>
+                <div id="logo">
+                    <a href="http://ufsc.br/" accesskey="0" id="portal-logo">
+                        <img id="brasaoUfsc_Header" src="./Restaurante Universitário_files/brasao_site_ufsc.svg" atl="Brasão UFSC">
+                        <h1>Restaurante Universitário</h1>
+                    </a>
+                </div>
+                <form action="http://ru.ufsc.br/" method="get" name="busca">
+                    <input type="text" placeholder="Buscar no portal" id="s" name="s" class="placeholder">
+                    <input type="submit" id="submit" value="">
+                </form>
+                <ul id="social" class="hide_mobile">
+                    <li><a href="https://pt-br.facebook.com/UniversidadeUFSC" title="Curta no Facebook" class="icon-facebook"></a></li>
+                    <li><a href="https://twitter.com/ufsc" title="Siga no Twitter" class="icon-twitter"></a></li>
+                    <li><a href="https://www.youtube.com/user/tvufsc" title="Vídeos no Youtube" class="icon-youtube"></a></li>
+                    <li><a href="https://www.instagram.com/universidadeufsc" title="Veja no Instagram" class="icon-camera"></a></li>
+                    <li><a href="http://ru.ufsc.br/feed" title="Assine as atualizações via RSS" class="icon-feed"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="menu-nav">
+            <ul>
+                <li id="menu-link-nav-acessoRestrito">
+                    <a href="http://siteru.paginas.ufsc.br//wp-admin">
+                        Área Restrita                    </a>
+                    <a href="http://ru.ufsc.br/?administradores" class="thickbox" title="Lista de Administradores deste Site">
+                        Administradores do Site                    </a>
+                </li>
+            </ul>
+            <a href="http://ru.ufsc.br/ru/#dropmenu" class="menu-link"><span aria-hidden="true" class="icon-menu"></span> Menu</a>
+        </div>
+    </header>
+    <section id="home" class="grid section group clearfix">
+
+
+
+
+
+
+
+
+
+
+                
+<section id="home" class="section group clearfix">  
+
+    <div id="sidebar_left" name="menu" class="hide_mobile">
+    <div id="menu_secundario_logo" class="hide_mobile">
+                <a id="atalho-navegacao" href="http://ru.ufsc.br/">
+            <img src="./Restaurante Universitário_files/brasao_default.png" alt="Menu de Navegação">
+        </a>
+    </div>
+
+    <ul role="navigation">
+        <li>
+            <dl id="margin_space">
+                <div class="pagenav"><ul id="menu--navegacao" class="pagenav"><li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://ru.ufsc.br/informativos/">Informativos</a></li>
+<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="http://ru.ufsc.br/estrutura/">Equipe</a></li>
+<li id="menu-item-2617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2617"><a href="http://ru.ufsc.br/quem-somos/">Conheça o RU</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110"><a href="http://ru.ufsc.br/servicos/">Serviços »</a>
+<ul>
+	<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://ru.ufsc.br/venda-de-passe/">Venda de Passe</a></li>
+	<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="http://ru.ufsc.br/confeccao-de-cartao/">Emissão de Cartão</a></li>
+	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://ru.ufsc.br/horario-de-funcionamento/">Horário de Funcionamento</a></li>
+</ul>
+</li>
+<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-72"><a href="http://ru.ufsc.br/cardapios/">Cardápios »</a>
+<ul>
+	<li id="menu-item-2641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2641"><a href="http://ru.ufsc.br/campus-ararangua/">Campus Araranguá</a></li>
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://ru.ufsc.br/cca-2/">Campus CCA</a></li>
+	<li id="menu-item-2642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2642"><a href="http://ru.ufsc.br/campus-curitibanos/">Campus Curitibanos</a></li>
+	<li id="menu-item-2640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2640"><a href="http://ru.ufsc.br/campus-joinville/">Campus Joinville</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-65 current_page_item menu-item-71"><a href="http://ru.ufsc.br/ru/">Campus Trindade</a></li>
+</ul>
+</li>
+<li id="menu-item-2805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2805"><a href="http://ru.ufsc.br/relatorios/">Demonstrativos</a></li>
+<li id="menu-item-2366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2366"><a href="http://ru.ufsc.br/portarias/">Portarias</a></li>
+<li id="menu-item-2624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2624"><a href="http://ru.ufsc.br/achados-e-perdidos/">Achados e Perdidos</a></li>
+<li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="http://ru.ufsc.br/links/">Links</a></li>
+<li id="menu-item-2625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2625"><a href="http://ru.ufsc.br/faq/">FAQ</a></li>
+<li id="menu-item-3082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3082"><a href="http://ru.ufsc.br/formularios/">Formulários</a></li>
+</ul></div>            </dl>
+        </li>
+    </ul>
+    </div>
+<script>
+    "use strict";
+    var menus = document.querySelectorAll(".widget_nav_menu > li");
+    for(var i = 0; i < menus.length; i++) {
+        if(menus[i].children.length == 1) {
+            menus[i].remove();
+        }
+    }
+</script>
+	<div class="col" name="conteudo">
+	    <section id="content">
+
+    
+        <ul id="breadcrumbs" class="hide_mobile"><li><a href="http://ru.ufsc.br/" title="Ir para a página inicial" class="home"><span aria-hidden="true" class="icon-home"></span></a></li><li style="width: 729px; overflow: hidden; white-space: nowrap;"><a href="http://ru.ufsc.br/ru/" class="current">Campus Trindade</a></li></ul>
+        
+            <article class="post" id="post-65">
+                <h2><a href="http://ru.ufsc.br/ru/">Campus Trindade</a></h2>
+
+                <div class="meta_header clearfix">
+                                        <span class="pu-share">
+                        
+                        <a href="http://twitter.com/home?status=Campus%20Trindade%20-%20http://ru.ufsc.br/ru/" title="Compartilhar no Twitter">
+                        <img src="./Restaurante Universitário_files/twitter.png"></a>
+
+                        <a href="http://www.facebook.com/sharer.php?u=http://ru.ufsc.br/ru/&amp;t=Campus%20Trindade" title="Compartilhar no Facebook">
+                        <img src="./Restaurante Universitário_files/facebook.png"></a>
+
+                        <a href="whatsapp://send?text=Campus Trindadehttp://ru.ufsc.br/ru/" title="Compartilhar no WhatsApp">
+                        <img src="./Restaurante Universitário_files/whatsapp.png"></a>
+                    </span>
+                </div>
+
+                <div class="content clearfix">
+
+                    <p><span style="color: #000080">Cardápio&nbsp;de 19/03 a 25/03<br>
+</span><strong><span style="color: #333399"><span style="color: #333333">Cardápio sujeito a alterações</span></span></strong></p>
+<table width="1047">
+<tbody>
+<tr>
+<td width="132"><strong>Segunda-feira</strong><p></p>
+<p><strong>19/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td width="99">Feijão Carioca / Ervilha</td>
+<td width="234">Frango (sobrecoxa ou sassami empanado) (Almoço) /&nbsp;&nbsp;<span style="font-family: inherit;font-size: inherit">Quibe (Jantar)</span></td>
+<td width="178">Farofa simples</td>
+<td width="143">Alface/ Pepino em conserva</td>
+<td width="110">Mamão</td>
+</tr>
+<tr>
+<td width="132"><strong>Terça-feira</strong><p></p>
+<p><strong>20/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td width="99">Feijão / Lentilha</td>
+<td width="234">&nbsp;Sobrecoxa de frango (Almoço) / Iscas de carne com cebola (Jantar)</td>
+<td width="178">&nbsp;Batata palha (Almoço)/ Macarrão&nbsp;com e sem molho branco (Jantar)</td>
+<td width="143">&nbsp;Beterraba/Rúcula</td>
+<td width="110">&nbsp;Salada de frutas</td>
+</tr>
+<tr>
+<td width="132"><strong>Quarta-feira</strong><p></p>
+<p><strong>21/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td width="99">Feijão /&nbsp;Ervilha</td>
+<td width="234">&nbsp;Filé mignon suíno com cebola e pimentão (Almoço)</td>
+<td width="178">Brócolis</td>
+<td width="143">&nbsp;Rabanete/Acelga</td>
+<td width="110">&nbsp;Melão</td>
+</tr>
+<tr>
+<td width="132"><strong>Quinta-feira</strong><p></p>
+<p><strong>22/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td width="99">Feijão Carioca /Lentilha</td>
+<td width="234">&nbsp;Sassami de frango empanado</td>
+<td width="178">&nbsp;Couve-flor</td>
+<td width="143">&nbsp;Chicória/ Pepino</td>
+<td width="110">&nbsp;Abacaxi</td>
+</tr>
+<tr>
+<td width="132"><strong>Sexta-feira</strong><p></p>
+<p><strong>23/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td width="99">Feijão/Lentilha</td>
+<td width="234">&nbsp;Estrogonofe de carne</td>
+<td width="178">&nbsp;Batata palha</td>
+<td width="143">&nbsp;Couve folha/ Cenoura</td>
+<td width="110">&nbsp;Kiwi</td>
+</tr>
+<tr>
+<td width="132"><strong>Sábado</strong><p></p>
+<p><strong>24/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td width="99">Feijão/Ervilha</td>
+<td width="234">&nbsp;Picadinho de carne com cebola</td>
+<td width="178">&nbsp;Batata inglesa com ervas</td>
+<td width="143">&nbsp;Pepino/ Alface</td>
+<td width="110">Morango</td>
+</tr>
+<tr>
+<td width="132"><strong>Domingo</strong><p></p>
+<p><strong>25/03</strong></p></td>
+<td width="134">Arroz Branco/<p></p>
+<p>Arroz Integral</p></td>
+<td style="text-align: center" width="99">Feijão Carioca/Lentilha</td>
+<td style="text-align: center" width="234">Iscas bovina ao molho barbecue</td>
+<td width="178">&nbsp;Abóbora cozida</td>
+<td width="143">Brócolis</td>
+<td width="110">&nbsp;Melão</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center"><span style="color: #000080"><strong><br>
+Ingredientes</strong></span>:&nbsp; <strong style="text-align: center"><span style="color: #000080">&nbsp;</span></strong></p>
+<table width="1030">
+<tbody>
+<tr>
+<td width="66"><strong>2ª FEIRA</strong></td>
+<td width="958"><strong>ARROZ PARBOILIZADO:&nbsp;</strong>arroz parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:</strong>&nbsp;arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO CARIOCA:&nbsp;</strong>feijão carioca, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>ERVILHA: </strong>ervilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>SOBRECOXA:</strong> sobrecoxa de frango, sal, óleo de soja, pimenta preta moída. <strong>OU</strong></p>
+<p><strong>SASSAMI DE FRANGO EMPANADO:</strong> carne de frango, água, farinha de trigo enriquecida com ferro e ácido fólico, gordura vegetal, amido, sal, farinha de milho, proteína de soja, açúcar, extrato de levedura, fermento biológico, especiarias (cebola em pó, alho em pó, salsa em flocos, aipo em pó e pimenta preta), carne de frango desidratada em pó, condimento preparado sabor galinha, aromatizantes (óleo resina de pimenta preta e óleo de orégano), realçador de sabor glutamato monossódico, estabilizante tripolifosfato de sódio, emulsificante mono e diglicerídeos de ácido graxos, espessantes goma guar e goma xantana, antioxidante isoascorbato de sódio, acidulante ácido cítrico, corantes naturais urucum e cúrcuma. <strong><em>Contém glúten.<a href="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone size-full wp-image-2123" src="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" alt="" width="30" height="30"></a></em></strong></p>
+<p><strong>QUIBE:</strong> carne bovina, água, trigo para quibe, sal, cebola, óleo vegetal, hortelã, pimenta preta,emulsificante: maltodextrina, antioxidante: eritorbato de sódio, estabilizante: polifosfato de sódio. <em><strong>Contém glúten.<a href="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone size-full wp-image-2123" src="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" alt="" width="30" height="30"> </a></strong></em></p>
+<p><strong>FAROFA SIMPLES: </strong>farinha de mandioca, óleo de soja, sal, colorau ou açafrão.</p>
+<p><strong>ALFACE:</strong> alface.</p>
+<p><strong>PEPINO EM CONSERVA:</strong> pepino em conserva.</p>
+<p><strong>MAMÃO:</strong> mamão.</p>
+<p><strong>MOLHO DE ERVAS:&nbsp;</strong>cebola, vinagre, sal, azeite de oliva, orégano, manjericão, manjerona, sálvia.</p></td>
+</tr>
+<tr>
+<td width="66"><strong>3ª FEIRA</strong></td>
+<td width="958"><strong>ARROZ PARBOILIZADO: </strong>arroz parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:</strong>&nbsp;arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO: </strong>feijão preto,cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>LENTILHA: </strong>lentilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>SOBRECOXA:</strong> sobrecoxa de frango, sal, óleo de soja, pimenta preta moída.</p>
+<p><strong>ISCAS DE CARNE COM CEBOLA:&nbsp;</strong>carne bovina, cebola, sal,óleo de soja, tempero verde, alho em pasta, pimenta preta moída, orégano.</p>
+<p><strong>BATATA PALHA:</strong> batata palha industrializada (batata inglesa, óleo de soja, sal).</p>
+<p><strong>MACARRÃO AO MOLHO BRANCO:&nbsp;</strong>&nbsp;macarrão de sêmola (sêmola de trigo enriquecida com Ferro e ácido fólico e corante natural cúrcuma),<strong>&nbsp;</strong>leite de vaca, cebola, farinha de trigo, sal, óleo de soja, tempero verde, noz moscada. <em><strong>Contém glúten e lactose</strong></em>.&nbsp;<strong><em><a href="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone size-full wp-image-2123" src="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" alt="" width="30" height="30"></a></em></strong><a href="./Restaurante Universitário_files/CONTÉM-LACTOSE.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone wp-image-2824" src="./Restaurante Universitário_files/CONTÉM-LACTOSE.png" alt="" width="29" height="29" srcset="http://ru.ufsc.br/files/2012/10/CONTÉM-LACTOSE.png 165w, http://ru.ufsc.br/files/2012/10/CONTÉM-LACTOSE-150x150.png 150w, http://ru.ufsc.br/files/2012/10/CONTÉM-LACTOSE-100x98.png 100w" sizes="(max-width: 29px) 100vw, 29px"></a></p>
+<p><strong>MACARRÃO AO ALHO E ÓLEO:&nbsp;</strong>macarrão de sêmola (sêmola de trigo enriquecida com Ferro e ácido fólico e corante natural cúrcuma), sal, óleo de soja,&nbsp; tempero verde,&nbsp; alho em pasta.&nbsp;<strong><em>Contém glúten</em>.<em><a href="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone size-full wp-image-2123" src="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" alt="" width="30" height="30"></a></em></strong></p>
+<p><strong>BETERRABA:</strong> beterraba.</p>
+<p><strong>RÚCULA:</strong> rúcula.</p>
+<p><strong>SALADA DE FRUTAS:</strong> abacaxi, maçã, mamão, melão.</p>
+<p><strong>MOLHO DE ERVAS:&nbsp;</strong>cebola, vinagre, sal, azeite de oliva, orégano, manjericão, manjerona, sálvia.</p></td>
+</tr>
+<tr>
+<td width="66"><strong>4ª FEIRA </strong></td>
+<td width="958"><strong>ARROZ PARBOILIZADO:</strong> arroz parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:</strong>&nbsp;arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO&nbsp; :</strong> feijão preto, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>LENTILHA:</strong> lentilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>FILÉ MIGNON SUÍNO COM CEBOLA E PIMENTÃO: </strong>carne suína,&nbsp;cebola, óleo de soja, pimentão, azeitonas, sal, alho em pasta, pimenta preta moída, orégano.</p>
+<p><strong>BRÓCOLIS:&nbsp;</strong>&nbsp;brócolis, sal.</p>
+<p><strong>ACELGA: </strong>Acelga.</p>
+<p><strong>RABANETE: </strong>Rabanete</p>
+<p><strong>MOLHO DE ERVAS:&nbsp;</strong>cebola, vinagre, sal, azeite de oliva, orégano, manjericão, manjerona, sálvia.</p>
+<p><strong>MELÃO:&nbsp;</strong>Melão.</p></td>
+</tr>
+<tr>
+<td width="66"><strong>5ª FEIRA </strong></td>
+<td width="958"><strong>ARROZ PARBOILIZADO: </strong>arroz &nbsp;parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:</strong>&nbsp;arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO:&nbsp;</strong>feijão, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>LENTILHA: </strong>lentilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>SASSAMI DE FRANGO EMPANADO:</strong>&nbsp;carne de frango, água, farinha de trigo enriquecida com ferro e ácido fólico, gordura vegetal, amido, sal, farinha de milho, proteína de soja, açúcar, extrato de levedura, fermento biológico, especiarias (cebola em pó, alho em pó, salsa em flocos, aipo em pó e pimenta preta), carne de frango desidratada em pó, condimento preparado sabor galinha, aromatizantes (óleo resina de pimenta preta e óleo de orégano), realçador de sabor glutamato monossódico, estabilizante tripolifosfato de sódio, emulsificante mono e diglicerídeos de ácido graxos, espessantes goma guar e goma xantana, antioxidante isoascorbato de sódio, acidulante ácido cítrico, corantes naturais urucum e cúrcuma.&nbsp;<strong><em>Contém glúten.<a href="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone size-full wp-image-2123" src="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" alt="" width="30" height="30"></a></em></strong></p>
+<p><strong>COUVE-FLOR COZIDOS: </strong>couve-flor, sal.</p>
+<p><strong>CHICÓRIA: </strong>Chicória.</p>
+<p><strong>PEPINO: </strong>Pepino.</p>
+<p><strong>MOLHO DE ERVAS:&nbsp;</strong>cebola, vinagre, sal, azeite de oliva, orégano, manjericão, manjerona, sálvia.</p>
+<p><strong>ABACAXI: </strong>Abacaxi.</p></td>
+</tr>
+<tr>
+<td width="66"><strong>6ª FEIRA </strong></td>
+<td width="958"><strong>AROZ PARBOILIZADO:</strong> arroz parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:</strong>&nbsp;arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO:</strong>feijão preto, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>LENTILHA:&nbsp;</strong>lentilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>ESTROGONOFE DE CARNE:</strong>&nbsp;carne bovina, leite, creme de leite, tomate, massa de tomate, cebola, palmito ou cogumelo em conserva, farinha de trigo, sal, óleo de soja, tempero verde, alho em pasta, noz moscada, manjericão, pimenta preta moída. <strong><em>Contém glúten e lactose.<a href="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone size-full wp-image-2123" src="./Restaurante Universitário_files/CONTPEM-GLUTEN-e1447065631795.png" alt="" width="30" height="30"></a><a href="./Restaurante Universitário_files/CONTÉM-LACTOSE.png" class="thickbox no_icon" rel="gallery-65"><img class="alignnone wp-image-2824" src="./Restaurante Universitário_files/CONTÉM-LACTOSE.png" alt="" width="29" height="29" srcset="http://ru.ufsc.br/files/2012/10/CONTÉM-LACTOSE.png 165w, http://ru.ufsc.br/files/2012/10/CONTÉM-LACTOSE-150x150.png 150w, http://ru.ufsc.br/files/2012/10/CONTÉM-LACTOSE-100x98.png 100w" sizes="(max-width: 29px) 100vw, 29px"></a></em></strong></p>
+<p><strong>BATATA PALHA:&nbsp;</strong>batata palha industrializada (batata inglesa, óleo de soja, sal).</p>
+<p><strong>COUVE-FOLHA:</strong> couve-folha.</p>
+<p><strong>CENOURA:</strong> cenoura.</p>
+<p><strong>MOLHO DE ERVAS:&nbsp;</strong>cebola, vinagre, sal, azeite de oliva, orégano, manjericão, manjerona, sálvia.</p>
+<p><strong>KIWI:&nbsp;</strong>kiwi.</p></td>
+</tr>
+<tr>
+<td width="66"><strong>SÁBADO</strong></td>
+<td width="958"><strong>AROZ PARBOILIZADO: </strong>arroz parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:&nbsp;</strong>arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO:</strong>feijão preto, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>ERVILHA:&nbsp;</strong>ervilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>PICADINHO DE CARNE COM CEBOLA:</strong> carne bovina, cebola, sal,óleo de soja, tempero verde, alho em pasta, pimenta preta moída.</p>
+<p><strong>BATATA INGLESA COM ERVAS: </strong>batata inglesa, sal, tempero verde, alecrim, manjericão, orégano.</p>
+<p><strong>PEPINO: </strong>pepino.</p>
+<p><strong>ALFACE: </strong>alface.</p>
+<p><strong>MORANGO: </strong>morango.</p></td>
+</tr>
+<tr>
+<td width="66"><strong>DOMINGO</strong></td>
+<td width="958"><strong>AROZ PARBOILIZADO:</strong> arroz parboilizado, sal, óleo de soja.<p></p>
+<p><strong>ARROZ INTEGRAL:</strong>&nbsp;arroz integral, sal, óleo de soja.</p>
+<p><strong>FEIJÃO CARIOCA:&nbsp;</strong>feijão carioca, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano, cominho.</p>
+<p><strong>LENTILHA:</strong>&nbsp;lentilha, cebola, sal, óleo de soja, alho em pasta, tempero verde, louro em folha, orégano.</p>
+<p><strong>ISCAS DE CARNE AO MOLHO BARBECUE:</strong> carne bovina, sal,óleo de soja, alho em pasta, pimenta preta moída, orégano, Molho Barbecue (polpa de tomate, açúcar, vinagre, amido, sal, condimento preparado sabor barbecue, sal, cebola, alho, mostarda, pimenta calabresa, realçador de sabor glutamato monossódico, aromatizante e antiumectante sílica), corante caramelo IV e conservadores benzoato de sódio e sorbato de potássio, sal, alho em pasta, pimenta preta moída.</p>
+<p><strong>ABÓBORA COZIDA:</strong> abóbora, sal, tempero verde.</p>
+<p><strong>BRÓCOLIS:</strong> brócolis cozido.</p>
+<p><strong>MELÃO: </strong>melão.</p>
+<p>&nbsp;</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong style="text-align: center"><span style="color: #000080">Cardápios anteriores: </span></strong></p>
+<p>Fevereiro:</p>
+<ul>
+<li><a href="http://ru.ufsc.br/files/2012/10/19-a-25.02.2018.pdf">19 a 25.02.2018</a></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><a href="http://ru.ufsc.br/files/2012/10/Mar%C3%A7o-a-Dezembro-de-2017.pdf">Março a Dezembro de 2017</a></li>
+<li><a href="http://ru.ufsc.br/files/2012/10/Mar%C3%A7o-a-Dezembro-de-2016.pdf">Março a Dezembro de 2016</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                </div>
+
+                    
+            </article>
+
+                    
+    
+        
+    
+        
+
+</section>
+	</div>
+
+	<div id="sidebar_right">
+<div id="nav_menu-2" class="widget widget_nav_menu"><h2>English version</h2><div class="pagenav"><ul id="menu--english-version" class="menu"><li id="menu-item-4224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4224"><a href="http://unirestaurant.ufsc.br/">Access our English website here</a></li>
+</ul></div></div><div id="linkcat-24" class="widget widget_links"><h2>Links Úteis</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://paginas.ufsc.br/">Paginas@UFSC</a></li>
+<li><a href="http://prae.ufsc.br/" title="Pró-Reitoria de Assuntos Estudantis" target="_top">PRAE</a></li>
+<li><a href="http://setic.ufsc.br/">SeTIC</a></li>
+<li><a href="http://www.ufsc.br/">UFSC</a></li>
+
+	</ul>
+</div>
+    <ul id="pu-contatos" class="last">
+        <li><h2>Contatos</h2>
+            <p>
+                ►Direção: 3721-8226<br>
+►Secretaria: 3721 9203<br>
+►Cozinha: 3721-9220<br>
+►Divisão de Nutrição: 3721-4923<br>
+►Almoxarifado: 3721-2687<br>
+►Apoio Administrativo: 3721-9681<br>
+►Contabilidade: 3721-8202<br>
+►Setor de Cartões: 3721 8503<br>
+►Email: ru@contato.ufsc.br            </p>
+        </li>
+    </ul>
+
+</div>
+
+
+</section>
+
+</section>
+<footer id="footer" class="clearfix" name="footer">
+    <div id="footer_links" class="grid clearfix" name="footer_links">
+        <div id="sponsors">
+                    <dl>
+                <dt>
+                    <a href="http://setic.ufsc.br/" target="_blank"><img src="./Restaurante Universitário_files/setic_ufsc.png" alt="SeTIC"></a>
+                </dt>
+                <dd></dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="http://paginas.ufsc.br/" target="_blank"><img src="./Restaurante Universitário_files/pag_ufsc.png" alt="Páginas UFSC"></a>
+                </dt>
+                <dd></dd>
+            </dl>
+                </div>
+                
+    </div>
+    <div id="footer_meta">
+
+        <div class="grid_footer clearfix">
+            <div id="badges">
+                <a href="http://www.acessoainformacao.gov.br/" title="Acesso à informação"><img src="./Restaurante Universitário_files/selo_acesso.png" alt="Acesso à informação" width="92" height="40"></a>
+            </div>
+
+            <div id="copyright">
+                <a href="http://brasil.gov.br/" title="Portal de Estado do Brasil"><img src="./Restaurante Universitário_files/marca_governo_federal.png" alt="Portal de Estado do Brasil" width="115" height="40"></a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<div class="extra-footer">
+    <ul>
+        <li> Desenvolvido com o CMS de código aberto <a href="https://br.wordpress.org/.org">Wordpress</a></li>
+        <li class="last-update">Última atualização do site foi em 23 de março 2018 - 18:30:52</li>
+    </ul>
+</div>
+
+		<script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="./Restaurante Universitário_files/ga.js" type="text/javascript"></script>
+		        
+		<script type="text/javascript">
+				var pageTracker = _gat._getTracker("UA-15541105-1");
+		pageTracker._initData();
+		pageTracker._setDomainName(".ufsc.br");
+		pageTracker._trackPageview();
+				</script>
+		<script type="text/javascript" src="./Restaurante Universitário_files/auto-thickbox.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/core.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/jquery.form.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/ru.ufsc.br\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Enviando ...","jqueryUi":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Restaurante Universitário_files/scripts.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/datepicker.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"d \\dd\\e MM \\dd\\e yy","firstDay":1,"isRTL":false});});
+</script>
+<script type="text/javascript" src="./Restaurante Universitário_files/widget.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/button.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/spinner.min.js"></script>
+<script type="text/javascript" src="./Restaurante Universitário_files/wp-embed.js"></script>
+</div></body></html>

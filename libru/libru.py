@@ -15,19 +15,23 @@ def sanitize(string):
                             .lower()))
 
 
-def ru():
-    resp = requests.get('http://ru.ufsc.br/ru/')
-
-    if not resp.ok:
-        return []
-
-    soup = bs4.BeautifulSoup(resp.content, 'lxml')
+def parse(content, weekday):
+    soup = bs4.BeautifulSoup(content, 'lxml')
     table = soup.find('div', class_='content clearfix').find('table')
 
     rows = table.find_all('tr')
-    weekday = datetime.now(timezone('America/Sao_Paulo')).weekday()
 
     today = [sanitize(entry.text)
              for entry in rows[weekday].find_all('td')[1:]]
 
     return today
+
+
+def ru():
+    resp = requests.get('http://ru.ufsc.br/ru/')
+    weekday = datetime.now(timezone('America/Sao_Paulo')).weekday()
+
+    if not resp.ok:
+        return []
+
+    return parse(resp.content, weekday)

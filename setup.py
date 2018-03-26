@@ -31,5 +31,4 @@ setup(
     entry_points={
         'console_scripts': ['ru=libru.cli:cli'],
     },
-
 )
