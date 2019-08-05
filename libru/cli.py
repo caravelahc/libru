@@ -1,15 +1,7 @@
 from libru import ru
 from sys import argv
 
-weekdays = [
-    'segunda',
-    'terca',
-    'quarta',
-    'quinta',
-    'sexta',
-    'sabado',
-    'domingo',
-]
+weekdays = ["segunda", "terca", "quarta", "quinta", "sexta", "sabado", "domingo"]
 
 
 def fail(msg):
@@ -19,8 +11,10 @@ def fail(msg):
 
 def parse_args():
     def parse_fail():
-        fail('dia invalido, deve ser entre 0 (segunda) e 6 (domingo)'
-             ' ou ser um de: {}'.format(', '.join(weekdays)))
+        fail(
+            "dia invalido, deve ser entre 0 (segunda) e 6 (domingo)"
+            " ou ser um de: {}".format(", ".join(weekdays))
+        )
 
     if len(argv) < 2:
         return None
@@ -35,11 +29,8 @@ def parse_args():
     except ValueError:
         try:
             return weekdays.index(
-                day
-                .strip()
-                .lower()
-                .replace('ç', 'c')
-                .replace('á', 'a'))
+                day.strip().lower().replace("ç", "c").replace("á", "a")
+            )
         except ValueError:
             parse_fail()
 
@@ -50,19 +41,19 @@ def cli():
     menu = ru(weekday=weekday)
 
     if not menu:
-        fail('cardápio indisponível')
+        fail("cardápio indisponível")
 
     if weekday is None:
-        print('hoje tem:')
+        print("hoje tem:")
     else:
         if isinstance(weekday, int):
-            print('{} tem:'.format(weekdays[weekday]))
+            print("{} tem:".format(weekdays[weekday]))
         else:
-            print('{} tem:'.format(weekday))
+            print("{} tem:".format(weekday))
 
     for item in menu:
-        print('\u2022', item)
+        print("\u2022", item)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli()

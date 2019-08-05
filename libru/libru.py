@@ -5,33 +5,41 @@ import re
 from pytz import timezone
 from datetime import datetime
 
-spaces = re.compile('\s+')
+spaces = re.compile(r"\s+")
 
 
 def sanitize(string):
-    return spaces.sub(' ', (string.strip(' \n\xa0')
-                            .replace('\n', ' ')
-                            .replace('/', ' e ')
-                            .lower()))
+    strings = string.strip(" \n\xa0").replace("/", " e ").lower()
+
+    for s in strings.split("\n"):
+        yield spaces.sub(" ", s)
 
 
-def parse(content, weekday):
-    soup = bs4.BeautifulSoup(content, 'lxml')
-    table = soup.find('div', class_='content clearfix').find('table')
+def _parse(content, weekday):
+    soup = bs4.BeautifulSoup(content, "lxml")
+    table = soup.find("div", class_="content clearfix").find("table")
 
-    rows = table.find_all('tr')
+    rows = table.find_all("tr")
 
-    today = [sanitize(entry.text)
-             for entry in rows[weekday].find_all('td')[1:]]
+    today = rows[weekday + 1].find_all("td")[2:]
 
-    return today
+    for entry in today:
+        items = sanitize(entry.text)
+
+        for s in items:
+            if s != '' and not s.isspace():
+                yield s
+
+
+def parse(*args):
+    return list(_parse(*args))
 
 
 def ru(weekday=None):
-    resp = requests.get('http://ru.ufsc.br/ru/')
+    resp = requests.get("http://ru.ufsc.br/ru/")
 
     if weekday is None:
-        weekday = datetime.now(timezone('America/Sao_Paulo')).weekday()
+        weekday = datetime.now(timezone("America/Sao_Paulo")).weekday()
 
     if not resp.ok:
         return []
